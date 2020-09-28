@@ -28,7 +28,7 @@ public class SecurityConfiguration extends KeycloakWebSecurityConfigurerAdapter 
 		
         super.configure(http);
     
-		    http.authorizeRequests().antMatchers("/index", "/index.html")
+		    http.authorizeRequests().antMatchers("/login", "/login.html")
 				   .permitAll().antMatchers("/dashboard", "/dashboard.html")
 					 .authenticated();				
     }
@@ -38,7 +38,7 @@ public class SecurityConfiguration extends KeycloakWebSecurityConfigurerAdapter 
         
 				super.configure(web);
 				
-        web.ignoring().antMatchers("/index", "/index.html");
+        web.ignoring().antMatchers("/login", "/login.html");
         
 				web.ignoring().antMatchers(HttpMethod.OPTIONS);
 

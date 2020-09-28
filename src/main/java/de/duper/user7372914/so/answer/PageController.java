@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class PageController {
 
-    @GetMapping(value = "/index")
-    String index(Model model) {
-        return "index";
+    @GetMapping(value = "/login")
+    String login(Model model) {
+        return "login";
     }
 
     @GetMapping(value = "/dashboard")

@@ -3,4 +3,5 @@
 technotes/**
 logs/**
 build/**
+**/product-app-*.jar
 

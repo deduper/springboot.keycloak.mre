@@ -60,7 +60,7 @@ Creating docker_app_1      ... done
 ```
 The Spring Boot app server should start up within seconds. The Keycloak server may take longer. You can examine the logs to check on their progress. Once both servers are completely up and running…
 
-10. Launch *`http://localhost:8081/index.html`* in a browser. Click on „*View Products*“ link on the „*Login page*“. Enter the user credentials: „*testuser/password*“ when prompted by Keycloak to login. A successful authentication should then redirect you to the *`http://localhost:8081/dashboard.html`* page.
+10. Launch *`http://localhost:8081/login.html`* in a browser. Click on „*View Products*“ link on the „*Login page*“. Enter the user credentials: „*testuser/password*“ when prompted by Keycloak to login. A successful authentication should then redirect you to the *`http://localhost:8081/dashboard.html`* page.
 
 The Keycloak Admin Console can be launched at *`http://localhost:8585/auth`*. Enter the adminstrator credentials: „*admin/admin*“ when prompted by Keycloak to login.
 
