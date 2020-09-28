@@ -48,7 +48,7 @@ Step 3/3 : EXPOSE 8080
 Successfully built 5b0596cb1653
 Successfully tagged docker_keycloak:latest
 ```
-8. Launch the application container and the Keycloak contaier by running the following docker-compose command…
+8. Launch the application container and the Keycloak container by running the following docker-compose command…
 ```bash
 docker-compose -f {%your.path.to%}/springboot.keycloak.mre/docker/docker-compose.yml up -d
 ```
