@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  app:
+    build: app
+    ports:
+       - 0.0.0.0:8081:8081
+  keycloak:
+    build: keycloak
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
+      - KEYCLOAK_IMPORT=/springdemo-realm.json
+      - PROXY_ADDRESS_FORWARDING=false
+      - DB_VENDOR=h2
+    command:
+       - '-Dkeycloak.profile.feature.upload_scripts=enabled'
+       - '-Dkeycloak.migration.action=import'
+       - '-Dkeycloak.migration.provider=singleFile'
+       - '-Dkeycloak.migration.file=/springdemo-realm.json'
+       - '-Dkeycloak.migration.strategy=OVERWRITE_EXISTING'
+    ports:
+       - 0.0.0.0:8585:8080
+       - 0.0.0.0:443:8443

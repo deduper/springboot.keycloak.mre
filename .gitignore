@@ -1,0 +1,4 @@
+.gradle/**
+*.keep*
+technotes/**
+logs/**
