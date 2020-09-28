@@ -2,3 +2,5 @@
 *.keep*
 technotes/**
 logs/**
+build/**
+
